@@ -37,7 +37,8 @@ export const App = () => {
         return contact;
       }
     };
-    const inContactList = contacts.map(contactsCheking).length;
+
+    const inContactList = contacts.filter(contactsCheking).length;
 
     if (!inContactList) {
       setContacts([data, ...contacts]);
